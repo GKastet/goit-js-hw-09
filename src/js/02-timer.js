@@ -8,6 +8,7 @@ const elements = {
   hours: document.querySelector('[data-hours]'),
   minutes: document.querySelector('[data-minutes]'),
   seconds: document.querySelector('[data-seconds]'),
+  input: document.querySelector('#datetime-picker')
 };
 
 const data = new Date();
@@ -26,8 +27,8 @@ const options = {
       elements.btnStart.disabled = false;
       elements.btnStart.addEventListener('click', handlerBtnStart);
       function handlerBtnStart() {
-        elements.btnStart.disabled = true;
         timerIdf = setInterval(() => {
+          elements.btnStart.disabled = true;
           if (selectedDates[0] <= new Date()) {
             clearInterval(timerId);
             alert('Please RELOAD window and choose a date in the future');
@@ -37,6 +38,7 @@ const options = {
           if (selectedDates[0] <= new Date()) {
             clearInterval(timerIdf);
           }
+          elements.input.disabled = true;
           difference = selectedDates[0] - new Date();
           let counter = convertMs(difference);
           elements.days.textContent = counter.days.toString().padStart(2, '0');
