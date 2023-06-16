@@ -13,6 +13,8 @@ const elements = {
 
 const data = new Date();
 elements.btnStart.disabled = true;
+let timerId;
+let timerIdf;
 
 const options = {
   enableTime: true,

@@ -18,8 +18,8 @@ function createPromise(position, delay) {
         // Reject    
         reject(({position, delay}))
       }
-    });
-  }, delay);  
+    }, delay);
+  });  
 }
 
 elements.form.addEventListener('submit', handlerFormSubmit);
