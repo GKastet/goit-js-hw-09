@@ -1,5 +1,5 @@
 import Notiflix from 'notiflix';
-console.log(Notiflix);
+
 const elements = {
   form: document.querySelector('.form'),
   inputDelay: document.querySelector('[name = "delay"]'),
