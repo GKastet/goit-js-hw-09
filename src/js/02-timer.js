@@ -31,6 +31,7 @@ const options = {
           elements.btnStart.disabled = true;
           if (selectedDates[0] <= new Date()) {
             clearInterval(timerId);
+            elements.input.disabled = false;
             alert('Please RELOAD window and choose a date in the future');
           }
         }, 1000);
