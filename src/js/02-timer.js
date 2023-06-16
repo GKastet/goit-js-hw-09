@@ -15,6 +15,7 @@ const data = new Date();
 elements.btnStart.disabled = true;
 let timerId;
 let timerIdf;
+let difference;
 
 const options = {
   enableTime: true,
