@@ -30,9 +30,9 @@ const options = {
         timerIdf = setInterval(() => {
           elements.btnStart.disabled = true;
           if (selectedDates[0] <= new Date()) {
+            //alert('Please RELOAD window and choose a date in the future');
             clearInterval(timerId);
             elements.input.disabled = false;
-            alert('Please RELOAD window and choose a date in the future');
           }
         }, 1000);
         timerId = setInterval(() => {

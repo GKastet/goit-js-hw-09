@@ -7,7 +7,7 @@ const elements = {
 elements.btnStop.disabled = true;
 
 elements.btnStart.addEventListener('click', handlerBtnStartClick);
-
+let timerId;
 function handlerBtnStartClick() {
   timerId = setInterval(() => {
     elements.body.style.backgroundColor = `${getRandomHexColor()}`;
